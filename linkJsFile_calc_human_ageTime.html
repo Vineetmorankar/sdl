@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Examples</title>
+</head>
+<body>
+    <h1>JavaScript Examples</h1>
+
+    <!-- Link the JavaScript file -->
+    <script>
+        // Alert
+        alert("Hello! I'm linked!");
+
+        // Calculate average number of weeks in a human lifetime (80 years)
+        const averageHumanLifespanYears = 80;
+        const weeksInAYear = 52; // There are 52 weeks in a year
+
+        const weeksInLifetime = averageHumanLifespanYears * weeksInAYear;
+        console.log("Average number of weeks in a human lifetime:", weeksInLifetime);
+
+        // Variables to store strings
+        let greeting = "Hello";
+        let name = "Alice";
+
+        // Concatenate strings
+        let message = greeting + ", " + name + "!";
+        console.log(message); // Output: Hello, Alice!
+
+        // Program to tell time of the day
+        const date = new Date();
+        const hour = date.getHours();
+
+        let timeOfDay;
+
+        if (hour >= 5 && hour < 12) {
+            timeOfDay = "morning";
+        } else if (hour >= 12 && hour < 18) {
+            timeOfDay = "afternoon";
+        } else {
+            timeOfDay = "night";
+        }
+
+        console.log("It's currently", timeOfDay);
+    </script>
+</body>
+</html>

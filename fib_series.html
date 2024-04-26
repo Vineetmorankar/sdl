@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fibonacci Series</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #fibonacciResult {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Fibonacci Series</h2>
+    <button onclick="calculateFibonacci()">Generate Fibonacci Series</button>
+    <div id="fibonacciResult"></div>
+
+    <script>
+        function calculateFibonacci() {
+            var n = parseInt(prompt("Enter the number of terms for Fibonacci Series:"));
+            var fibonacciSeries = [];
+
+            // First two terms
+            var a = 0, b = 1;
+            fibonacciSeries.push(a, b);
+
+            for (var i = 2; i < n; i++) {
+                var next = a + b;
+                fibonacciSeries.push(next);
+                a = b;
+                b = next;
+            }
+
+            var resultDiv = document.getElementById("fibonacciResult");
+            resultDiv.innerHTML = "<h3>Fibonacci Series:</h3>" + fibonacciSeries.join(", ");
+        }
+    </script>
+</body>
+</html>
